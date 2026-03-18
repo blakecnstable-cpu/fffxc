@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing — KnowYourRights Document Checker</title>
+<meta name="description" content="Unlock the Document Checker — paste any contract or legal document and get an instant plain-English breakdown. From £9/month.">
+<link rel="canonical" href="https://knowyourrights.co.uk/pricing.html">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.pricing-wrap { max-width: 1060px; margin: 0 auto; padding: 56px 40px 100px; }
+.tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 40px 0; }
+.tier { border: 1.5px solid var(--border); border-radius: 22px; padding: 30px; background: var(--card); display: flex; flex-direction: column; position: relative; transition: transform .2s, box-shadow .2s; }
+.tier:hover { transform: translateY(-4px); box-shadow: 0 16px 44px rgba(15,14,12,.1); }
+.tier.hot { background: var(--ink); border-color: var(--ink); }
+.tier-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; white-space: nowrap; }
+.tier-name { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.tier.hot .tier-name { color: rgba(245,242,235,.4); }
+.tier-price { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 48px; letter-spacing: -0.04em; line-height: 1; margin-bottom: 4px; }
+.tier-price sup { font-size: 22px; vertical-align: super; line-height: 0; }
+.tier-price sub { font-size: 15px; font-weight: 400; opacity: .4; }
+.tier.hot .tier-price { color: #fff; }
+.tier-desc { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.5; }
+.tier.hot .tier-desc { color: rgba(245,242,235,.4); }
+.feat-list { list-style: none; padding: 0; margin: 0 0 28px; flex: 1; }
+.feat-list li { font-size: 14px; padding: 9px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; line-height: 1.45; font-weight: 300; }
+.tier.hot .feat-list li { border-color: rgba(255,255,255,.08); color: rgba(245,242,235,.8); }
+.feat-list li::before { content: '✓'; font-weight: 700; color: var(--orange); flex-shrink: 0; margin-top: 1px; }
+.tier.hot .feat-list li::before { color: var(--accent); }
+.pp-ph { background: var(--paper); border: 1.5px dashed var(--border); border-radius: 12px; padding: 14px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.tier.hot .pp-ph { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.15); color: rgba(245,242,235,.35); }
+.pp-ph a { color: var(--orange); font-weight: 600; }
+.tier.hot .pp-ph a { color: var(--accent); }
+.pp-note { font-size: 11px; text-align: center; margin-top: 8px; color: var(--muted); }
+.tier.hot .pp-note { color: rgba(245,242,235,.3); }
+.setup-box { background: #e6f1fb; border: 1.5px solid #85b7eb; border-radius: 18px; padding: 24px 28px; margin-bottom: 40px; }
+.setup-box h3 { font-size: 17px; color: #0c447c; margin-bottom: 12px; }
+.setup-box ol { font-size: 14px; color: #185fa5; line-height: 1.8; padding-left: 20px; margin: 0; }
+.setup-box a { color: #0c447c; font-weight: 600; }
+.setup-box code { background: rgba(37,99,235,.1); padding: 2px 7px; border-radius: 4px; font-family: monospace; font-size: 12px; }
+.ct { width: 100%; border-collapse: collapse; margin: 32px 0; }
+.ct th, .ct td { padding: 13px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+.ct th { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.ct td:not(:first-child) { text-align: center; }
+.tick { color: var(--orange); font-weight: 700; }
+.cross { color: var(--border); }
+.faq-wrap { max-width: 680px; margin: 56px auto 0; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+.faq-q { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.faq-a { font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.75; margin-top: 12px; display: none; }
+.faq-a.open { display: block; animation: fadeUp .25s ease; }
+.faq-q .arr { font-size: 18px; transition: transform .2s; color: var(--muted); }
+.faq-q.open .arr { transform: rotate(180deg); }
+@media (max-width: 800px) { .tiers { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; } .pricing-wrap { padding: 40px 20px 60px; } }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">KnowYour<em>Rights</em></a>
+  <div class="nav-links">
+    <a href="consumer-rights.html">Consumer</a>
+    <a href="online-rights.html">Online</a>
+    <a href="tools.html">Tools</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="assistant.html" class="nav-cta">AI Assistant</a>
+  </div>
+</nav>
+
+<div class="page-hero" style="background:var(--ink);color:#fff;padding-top:100px;text-align:center">
+  <div class="hero-ghost" style="-webkit-text-stroke-color:rgba(255,255,255,.06)">PLANS</div>
+  <div class="page-hero-inner" style="max-width:660px;margin:0 auto">
+    <div class="tag tag-accent" style="margin:0 auto 18px">AI assistant plans</div>
+    <h1 style="color:#fff">Personalised legal answers,<br>from £9 a month.</h1>
+    <p class="lead" style="color:rgba(245,242,235,.55);text-align:center;margin:0 auto">The free AI chat and guides stay free. Subscribe to unlock the Document Checker — paste any contract, T&Cs, or legal letter and get an instant plain-English analysis.</p>
+  </div>
+</div>
+
+<div class="pricing-wrap">
+
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-name">Standard</div>
+      <div class="tier-price"><sup>£</sup>9<sub>/mo</sub></div>
+      <div class="tier-desc">For individuals</div>
+      <ul class="feat-list">
+        <li>Unlimited document checks</li>
+        <li>Contracts, T&amp;Cs, letters, policies</li>
+        <li>Flags unfair &amp; illegal clauses</li>
+        <li>Explains your rights for each document</li>
+        <li>Free AI assistant &amp; all guides</li>
+      </ul>
+      <div class="pp-ph">PayPal button — <a href="https://developer.paypal.com" target="_blank">set up your plan →</a><br><small>Replace with your PayPal subscription button</small></div>
+      <div id="paypal-essential"></div>
+      <p class="pp-note">Cancel anytime · Secure payment via PayPal</p>
+    </div>
+
+    <div class="tier hot">
+      <div class="tier-badge">Most popular</div>
+      <div class="tier-name">Pro</div>
+      <div class="tier-price"><sup>£</sup>19<sub>/mo</sub></div>
+      <div class="tier-desc">For freelancers &amp; landlords</div>
+      <ul class="feat-list">
+        <li>Everything in Standard</li>
+        <li>Compare up to 3 documents side by side</li>
+        <li>Document history — save past analyses</li>
+        <li>Priority email support</li>
+        <li>Early access to new features</li>
+      </ul>
+      <div class="pp-ph">PayPal button — <a href="https://developer.paypal.com" target="_blank">set up your plan →</a></div>
+      <div id="paypal-standard"></div>
+      <p class="pp-note">Cancel anytime · Secure payment via PayPal</p>
+    </div>
+
+    <div class="tier">
+      <div class="tier-name">Business</div>
+      <div class="tier-price"><sup>£</sup>39<sub>/mo</sub></div>
+      <div class="tier-desc">For small businesses</div>
+      <ul class="feat-list">
+        <li>Everything in Pro</li>
+        <li>Up to 5 team members</li>
+        <li>Analyse supplier contracts &amp; NDAs</li>
+        <li>Monthly legal digest newsletter</li>
+        <li>Dedicated support channel</li>
+      </ul>
+      <div class="pp-ph">PayPal button — <a href="https://developer.paypal.com" target="_blank">set up your plan →</a></div>
+      <div id="paypal-family"></div>
+      <p class="pp-note">Cancel anytime · Secure payment via PayPal</p>
+    </div>
+  </div>
+
+  <div class="setup-box reveal">
+    <h3>How to activate PayPal payments</h3>
+    <ol>
+      <li>Go to <a href="https://developer.paypal.com" target="_blank">developer.paypal.com</a> → create a free Business account</li>
+      <li>Create an App → copy your <strong>Client ID</strong> → paste it into <code>assistant.html</code> replacing <code>YOUR_CLIENT_ID</code></li>
+      <li>Go to <strong>Subscriptions → Products → Create Product</strong>, then create 3 Plans: £9/mo, £24/mo, £49/mo</li>
+      <li>Copy each <strong>Plan ID</strong> into the <code>PLAN_IDS</code> object in <code>assistant.html</code></li>
+      <li>Remove the "Dev bypass" button from <code>assistant.html</code> before going live</li>
+    </ol>
+  </div>
+
+  <div class="section-label reveal" style="margin-top:48px">Full comparison</div>
+  <table class="ct reveal">
+    <thead><tr><th>Feature</th><th>Free</th><th>Standard</th><th>Pro</th><th>Business</th></tr></thead>
+    <tbody>
+      <tr><td>All guides &amp; articles</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+      <tr><td>Letter builder &amp; rights checker</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+      <tr><td>SAR generator</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+      <tr><td>Document Checker</td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+      <tr><td>Compare 3 documents</td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+      <tr><td>Document history</td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
+      <tr><td>Team members</td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td>Up to 5</td></tr>
+    </tbody>
+  </table>
+
+  <div class="faq-wrap reveal">
+    <div class="section-label">Common questions</div>
+    <div class="faq-item"><div class="faq-q" onclick="faq(this)">Is the AI assistant real legal advice? <span class="arr">↓</span></div><div class="faq-a">No. The AI provides general legal information based on UK law — like our free guides, but personalised to your situation. It is not advice from a qualified solicitor. For complex or high-value matters, always consult a solicitor via solicitors.lawsociety.org.uk.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faq(this)">Can I cancel anytime? <span class="arr">↓</span></div><div class="faq-a">Yes. Cancel through your PayPal account at any time. No contracts, no cancellation fees. Your access continues until the end of your current billing period.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faq(this)">What areas of law does the AI cover? <span class="arr">↓</span></div><div class="faq-a">Currently: UK consumer rights (Consumer Rights Act 2015, refunds, faulty goods, online shopping, scams) and online/social media rights (UK GDPR, Online Safety Act 2023, content removal, harassment, defamation). Employment and housing rights are coming soon.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faq(this)">What payment methods do you accept? <span class="arr">↓</span></div><div class="faq-a">We use PayPal, which accepts all major debit and credit cards, bank accounts, and PayPal balances. We never see your card details — PayPal handles everything securely.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faq(this)">Is there a free trial? <span class="arr">↓</span></div><div class="faq-a">The free guides and tools (letter builder, rights checker, SAR generator) don't need an account. For a trial of the AI assistant, email hello@knowyourrights.co.uk and we'll set one up.</div></div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-logo">KnowYour<em>Rights</em></div><p class="footer-tagline">Free, plain-English guides to UK consumer rights and online rights.</p></div>
+    <div class="footer-col"><h5>Guides</h5><a href="consumer-rights.html">Consumer rights</a><a href="online-rights.html">Online rights</a></div>
+    <div class="footer-col"><h5>Tools</h5><a href="tools.html">Letter builder</a><a href="assistant.html">AI assistant</a></div>
+    <div class="footer-col"><h5>Info</h5><a href="about.html">About</a><a href="pricing.html">Pricing</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 KnowYourRights</div>
+    <div class="footer-disc">General legal information only. Not legal advice. Consult a qualified solicitor for specific matters.</div>
+  </div>
+</footer>
+<script>
+function faq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open');}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
